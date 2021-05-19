@@ -1,0 +1,24 @@
+        public class <AliasRowName> : System.Data.DataRow
+        {
+            private <AliasTableName> table<AliasTableName>;
+
+            internal <AliasRowName>(System.Data.DataRowBuilder rb)
+                : base(rb)
+            {
+                this.table<AliasTableName> = ((<AliasTableName>)(this.Table));
+            }
+
+            <COLUMN_PROPERTY_UNIQUE>
+
+                OR
+
+            <COLUMN_PROPERTY_INT>
+
+                OR
+
+            <COLUMN_PROPERTY_DECIMAL>
+
+                OR
+
+            <COLUMN_PROPERTY_NULLABLE>
+        }

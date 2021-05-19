@@ -1,0 +1,90 @@
+<MEMBER_COLUMNS_DECLARATION> :
+			private System.Data.DataColumn field<ColumnName> = null;
+            
+<DATA_COLUMN_VALUES_ARRAY> :
+ 			<ColumnName>        //if(!last), else nothing
+                    
+<INIT_VARS_COLUMNS> :                    
+            this.field<ColumnName> = base.Columns["<ColumnName>"];
+
+<MEMBER_COLUMNS_DEFINITION> :
+			this.field<ColumnName> = new System.Data.DataColumn("<ColumnName>", typeof(<ColumnType>), null, System.Data.MappingType.Element);
+            base.Columns.Add(this.field<ColumnName>);
+
+<MEMBER_COLUMN_IF_UNIQUE> :
+			this.field<ColumnName>.Unique = true;
+            this.field<ColumnName>.AllowDBNull = false;                	
+
+<COLUMN_PROPERTY_UNIQUE> :
+ 			public int <ColumnName>
+            {
+                get
+                {
+                    //A primary key field can never be null so we don't check for DBNull here.
+                    return (int)(this[this.table<AliasTableName>.field<ColumnName>]);
+                }
+                set
+                {
+                    this[this.table<AliasTableName>.field<ColumnName>] = value;
+                }
+            }					
+
+<COLUMN_PROPERTY_INT> :
+ 			public <ColumnType> <ColumnName>
+            {
+                 get
+                {
+                    try
+                    {
+                        return (<ColumnType>)(this[this.table<AliasTableName>.field<ColumnName>]);
+                    }
+                    catch (global::System.InvalidCastException excptn)
+                    {
+                        return <ColumnType>.MinValue;
+                    }
+                }
+                set
+                {
+                    this[this.table<AliasTableName>.field<ColumnName>] = value;
+                }
+            }					     
+
+<COLUMN_PROPERTY_DECIMAL> :
+ 			public <ColumnType> <ColumnName>
+            {
+                 get
+                {
+                    try
+                    {
+                        return (<ColumnType>)(this[this.table<AliasTableName>.field<ColumnName>]);
+                    }
+                    catch (global::System.InvalidCastException excptn)
+                    {
+                        return <ColumnType>.NegativeInfinity;;
+                    }
+                }
+                set
+                {
+                    this[this.table<AliasTableName>.field<ColumnName>] = value;
+                }
+            }					            
+
+<COLUMN_PROPERTY_NULLABLE> :
+ 			public <ColumnType> <ColumnName>
+            {
+                 get
+                {
+                    try
+                    {
+                        return (<ColumnType>)(this[this.table<AliasTableName>.field<ColumnName>]);
+                    }
+                    catch (global::System.InvalidCastException excptn)
+                    {
+                        return null;
+                    }
+                }
+                set
+                {
+                    this[this.table<AliasTableName>.field<ColumnName>] = value;
+                }
+            }					   			                                    			                        

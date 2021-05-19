@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Library_IBP">
+      <UniqueIdentifier>{e0284076-7911-44ab-9ae2-a33ecfb3a399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library_IBP\ibp_headers">
+      <UniqueIdentifier>{c4732860-ef75-482a-94a5-c759cd51412d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ibp\_dpb.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\_ibpp.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\_ibs.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\_rb.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\_spb.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\_tpb.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\array.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\blob.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\database.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\date.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\dbkey.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\events.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\exception.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\row.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\service.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\statement.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\time.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\transaction.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ibp\user.cpp">
+      <Filter>Library_IBP</Filter>
+    </ClCompile>
+    <ClCompile Include="ComFirebirdDDFProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FirebirdDDFClassFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFirebirdDDFProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComFirebirdDDFProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FirebirdDDFClassFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDFProviderTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ibp\_ibpp.h">
+      <Filter>Library_IBP\ibp_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ibp\common_defines.h">
+      <Filter>Library_IBP\ibp_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ibp\ibase.h">
+      <Filter>Library_IBP\ibp_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ibp\iberror.h">
+      <Filter>Library_IBP\ibp_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ibp\ibpp.h">
+      <Filter>Library_IBP\ibp_headers</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardQueries1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDFProviderCollectionTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExportedFunctions.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

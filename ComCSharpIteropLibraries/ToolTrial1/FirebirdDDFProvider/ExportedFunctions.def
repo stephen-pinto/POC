@@ -1,0 +1,4 @@
+LIBRARY FirebirdDDFProvider.dll
+EXPORTS
+      DllGetClassObject		 PRIVATE
+      DllCanUnloadNow		 PRIVATE

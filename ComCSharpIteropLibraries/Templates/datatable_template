@@ -1,0 +1,110 @@
+        public class <AliasTableName> : System.Data.TypedTableBase<<AliasRowName>>
+        {
+            <MEMBER_COLUMNS_DECLARATION>   
+
+            public <AliasTableName>()
+            {
+                this.AliasTableName = <AliasTableName>;
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+
+            public <AliasTableName>(System.Data.DataTable table)
+            {
+                this.AliasTableName = table.AliasTableName;
+
+                if (table.CaseSensitive != table.DataSet.CaseSensitive)
+                    this.CaseSensitive = table.CaseSensitive;
+                if (table.Locale.ToString() != table.DataSet.Locale.ToString())
+                    this.Locale = table.Locale;
+                if (table.Namespace != table.DataSet.Namespace)
+                    this.Namespace = table.Namespace;
+
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+
+            protected <AliasTableName>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) :
+                base(info, context)
+            {
+                this.InitVars();
+            }
+
+            public int Count
+            {
+                get
+                {
+                    return this.Rows.Count;
+                }
+            }
+
+            public TempTableDataRow this[int indx]
+            {
+                get
+                {
+                    return ((TempTableDataRow)(this.Rows[indx]));
+                }
+            }
+
+            public void Add<AliasRowName>(<AliasRowName> row)
+            {
+                this.Rows.Add(row);
+            }
+
+            public <AliasRowName> Add<AliasRowName>(int COLUMN_ONE, string COLUMN_TWO, string COLUMN_THREE, float COLUMN_FOUR)
+            {
+                System.Data.DataRow DRow = this.NewRow();
+                <AliasRowName> row = (<AliasRowName>)(DRow);
+                object[] colValuesArray = new object[] 
+                {
+                   <DATA_COLUMN_VALUES_ARRAY>
+                };
+                row.ItemArray = colValuesArray;
+                this.Rows.Add(row);
+                return row;
+            }
+
+            private void InitVars()
+            {
+                <INIT_VARS_COLUMNS>
+            }
+
+            private void InitClass()
+            {
+                <MEMBER_COLUMNS_DEFINITION>
+                //this.Constraints.Add(new System.Data.UniqueConstraint("Constraint1", new System.Data.DataColumn[] { this.fieldCOLUMN_ONE }, true));
+                this.fieldCOLUMN_ONE.Unique = true;
+                this.fieldCOLUMN_ONE.AllowDBNull = false;
+                this.fieldCOLUMN_TWO.MaxLength = 20;
+                this.fieldCOLUMN_THREE.MaxLength = 50;
+            }
+
+
+            public <AliasRowName> New<AliasRowName>()
+            {
+                return ((<AliasRowName>)this.NewRow());
+            }
+
+            protected override System.Data.DataRow NewRowFromBuilder(System.Data.DataRowBuilder builder)
+            {
+                return new <AliasRowName>(builder);
+            }
+
+            protected override System.Type GetRowType()
+            {
+                return typeof(<AliasRowName>);
+            }
+
+            public override System.Data.DataTable Clone()
+            {
+                <AliasTableName> cln = ((<AliasTableName>)base.Clone());
+                cln.InitVars();
+                return cln;
+            }
+
+            protected override System.Data.DataTable CreateInstance()
+            {
+                return new <AliasTableName>();
+            }
+        }
